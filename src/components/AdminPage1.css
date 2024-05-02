@@ -1,0 +1,147 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal input[type="text"],
+  .modal input[type="number"] {
+    width: 80%; /* Adjust width as needed */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center; /* Align text at the center */
+  }
+  
+  .modal input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: #888;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #555;
+  }
+  
+  .modal h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .modal input[type="text"],
+  .modal input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .modal button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .modal button[type="submit"]:hover {
+    background-color: #1558d6;
+  }
+  
+  .add-driver {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  .add-driver button {
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .add-driver button:hover {
+    background-color: #1558d6;
+  }
+  
+  .drivers-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .drivers-table th,
+  .drivers-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .drivers-table th {
+    background-color: #f2f2f2;
+    text-align: left;
+  }
+  
+  .drivers-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .drivers-table tbody tr:hover {
+    background-color: #f2f2f2;
+  }
+  
+  .drivers-table td {
+    text-align: center;
+    padding: 8px 16px;
+  }
+  

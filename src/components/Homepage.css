@@ -1,0 +1,101 @@
+/*body {
+    background-image: url('../images/dswdpics.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin: 0;
+    padding: 0;
+}*/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 3%;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Increased elevation */
+    width: 400px;
+    margin: 5%;
+}
+
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1877f2;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #808080;
+}
+
+.form-group input[type="text"],
+.form-group input[type="password"] {
+    width: calc(100% - 30px); /* Adjusted width */
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #dcdcdc;
+}
+
+/* Remove the original button styles */
+button.btnlogin {
+    width: 100%;
+    padding: 15px;
+    background-color: #1877f2;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.btnlogin:hover {
+    background-color: #125ac2; /* Change the color on hover */
+}
+
+
+.links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    color: #1877f2;
+}
+
+.links .separator {
+    margin: 0 10px;
+}
+.password-input-container {
+    position: relative;
+}
+
+.password-input-container input {
+    padding-right: 40px; /* Ensure space for the eye button */
+}
+
+.eye-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.eye-button img {
+    width: 20px;
+    height: auto;
+}

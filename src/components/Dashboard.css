@@ -1,0 +1,35 @@
+
+.dashboardcontent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tables-container {
+    display: flex;
+  }
+  
+  .table {
+    margin-right: 20px;
+  }
+  
+  
+  
+  .selected {
+    background-color: lightblue;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .larger-table {
+    width: 70%;
+    border-collapse: collapse;
+    margin-left:10%;
+  }
+  
+  .larger-table td {
+    padding: 30px;
+    text-align: center;
+    margin-left: 20%;
+    table-layout: auto;
+  }
