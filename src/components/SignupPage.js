@@ -1,44 +1,43 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import './Homepage.css';
+import './SignupPage.css';
 import eyeIcon from '../images/hide.png';
 import { auth } from '../firebase'
-import { signInWithEmailAndPassword } from 'firebase/auth'
+import { createUserWithEmailAndPassword } from 'firebase/auth';
 
-function HomePage() {
+function SignupPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
-    const navigate = useNavigate();
+    const navigate = useNavigate(); 
 
-    const handleLogin = (e) => {
+    const handleSignup = (e) => {
         e.preventDefault();
-        
+    
         const email = e.target.email.value;
         const password = e.target.password.value;
-    
-        signInWithEmailAndPassword(auth, email, password)
+        
+        createUserWithEmailAndPassword(auth, email, password)
         .then(() => {
-            console.log("User logged in successfully");
+            console.log("User signed up successfully");
             navigate("/admin");
         })
         .catch((err) => {
-            console.error("Login Error:", err);
+            console.error("Signup Error:", err);
             alert(err.message); // Display error message instead of code
-        });
+        }); 
     };
-    
 
     return (
         <div className="container">
-            <div className="login-container">
-                <h2>Login</h2>
-                <form onSubmit={handleLogin}>
+            <div className="signup-container">
+                <h2>Sign Up</h2>
+                <form onSubmit={handleSignup}>
                     <div className="form-group">
                         <input
-                            type="text"
-                            name="email"
+                            type="email"
                             id="email"
+                            name="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
@@ -48,8 +47,8 @@ function HomePage() {
                     <div className="form-group password-input-container">
                         <input
                             type={showPassword ? 'text' : 'password'}
-                            name="password"
                             id="password"
+                            name="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             required
@@ -63,11 +62,11 @@ function HomePage() {
                             <img src={eyeIcon} alt={showPassword ? "Hide password" : "Show password"} />
                         </button>
                     </div>
-                    <button className='btnlogin' type="submit">Login</button>
+                    <button className='btnsignup' type="submit">Sign Up</button>
                     <div className="links">
-                        <Link to="/signup" className="signup-link">Sign Up</Link>
+                        <Link to="/" className="login-link">Login</Link>
                         <span className="separator"> | </span>
-                        <Link to="/forgot" className="forgot-password-link">Forgot Password</Link>
+                        <Link to="/forgot-password" className="forgot-password-link">Forgot Password</Link>
                     </div>
                 </form>
             </div>
@@ -75,4 +74,4 @@ function HomePage() {
     );
 }
 
-export default HomePage;
+export default SignupPage;
